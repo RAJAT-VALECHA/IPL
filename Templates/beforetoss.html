@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1{text-align: center;}
+      button.button {
+          display: block;
+          width : 100%;
+          background: #45a049;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+          color: white;
+          font-weight: bold;
+          line-height: 25px;
+      }
+      a.button {
+          display: block;
+          background: #45a049;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+          color: white;
+          font-weight: bold;
+          line-height: 25px;
+      }
+
+        button:hover {
+          background-color: #45a049;
+        }
+        body {
+            text-align: center;
+        }
+        h1{
+            font-size: 55px;
+        }
+        form {
+            display: inline-block;
+        }
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+          }
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+  </style>
+  </head>
+  <body style="background-color:powderblue;"></body>
+  <section id="IPL">
+    <h1>Team Basis Prediction</h1>
+</section>
+<body>
+      <form action="/BTResult" method="post">
+          {% csrf_token %}
+          <div>
+            <select name="Team1_Name" list="Team1" placeholder="Team 1 Name">
+              <option value="100">Team Name 1</option>
+              <option value="0">Chennai Super Kings</option>
+              <option value="1">Delhi Capitals</option>
+              <option value="2">Kolkata Knight Riders</option>
+              <option value="4">Mumbai Indians</option>
+              <option value="3">Punjab Kings</option>
+              <option value="6">Rajasthan Royals</option>
+              <option value="7">Royal Challenger Banglore</option>
+              <option value="8">Sunrisers Hyderabad</option>
+            </select>
+
+
+            <select id="Team2_Name" name="Team2_Name" placeholder="Team 2 Name">
+              <option value="100">Team Name 2</option>
+              <option value="0">Chennai Super Kings</option>
+              <option value="1">Delhi Capitals</option>
+              <option value="2">Kolkata Knight Riders</option>
+              <option value="4">Mumbai Indians</option>
+              <option value="3">Punjab Kings</option>
+              <option value="6">Rajasthan Royals</option>
+              <option value="7">Royal Challenger Banglore</option>
+              <option value="8">Sunrisers Hyderabad</option>
+              </select>
+            <select id="Toss_Wining_Team" name="Toss_Wining_Team" placeholder="Toss Wining Team">
+              <option value="100">Toss Wining Team</option>
+              <option value="0">Chennai Super Kings</option>
+              <option value="1">Delhi Capitals</option>
+              <option value="2">Kolkata Knight Riders</option>
+              <option value="4">Mumbai Indians</option>
+              <option value="3">Punjab Kings</option>
+              <option value="6">Rajasthan Royals</option>
+              <option value="7">Royal Challenger Banglore</option>
+              <option value="8">Sunrisers Hyderabad</option>
+              </select>
+              <select id="Toss_Decision" name="Toss_Decision" placeholder="Toss Decision">
+                <option value="Toss Wining Team">Toss Decision</option>
+                <option value="0">Batting</option>
+                <option value="1">Bowling</option>
+              </select>
+              <select id="Venue" name="Venue" placeholder="Venue">
+                <option value="Venue">Venue</option>
+  <option value="0">Barabati Stadium</option>
+  <option value="1">Brabourne Stadium</option>
+  <option value="2">Buffalo Park</option>
+  <option value="3">De Beers Diamond Oval</option>
+  <option value="4">Dr DY Patil Sports Academy</option>
+  <option value="5">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+  <option value="6">Dubai International Cricket Stadium</option>
+  <option value="7">Eden Gardens</option>
+  <option value="8">Feroz Shah Kotla</option>
+  <option value="9">Green Park</option>
+  <option value="10">Himachal Pradesh Cricket Association Stadium</option>
+  <option value="11">Holkar Cricket Stadium</option>
+  <option value="12">JSCA International Stadium Complex</option>
+  <option value="13">Kingsmead</option>
+  <option value="14">M Chinnaswamy Stadium</option>
+  <option value="15">MA Chidambaram Stadium, Chepauk</option>
+  <option value="16">Maharashtra Cricket Association Stadium</option>
+  <option value="17">Nehru Stadium</option>
+  <option value="18">New Wanderers Stadium</option>
+  <option value="19">Newlands</option>
+  <option value="20">OUTsurance Oval</option>
+  <option value="21">Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+  <option value="22">Punjab Cricket Association Stadium, Mohali</option>
+  <option value="23">Rajiv Gandhi International Stadium, Uppal</option>
+  <option value="24">Sardar Patel Stadium, Motera</option>
+  <option value="25">Saurashtra Cricket Association Stadium</option>
+  <option value="26">Sawai Mansingh Stadium</option>
+  <option value="27">Shaheed Veer Narayan Singh International Stadium</option>
+  <option value="28">Sharjah Cricket Stadium</option>
+  <option value="29">Sheikh Zayed Stadium</option>
+  <option value="30">St George's Park</option>
+  <option value="31">Subrata Roy Sahara Stadium</option>
+  <option value="32">SuperSport Park</option>
+  <option value="33">Vidarbha Cricket Association Stadium, Jamtha</option>
+  <option value="34">Wankhede Stadium</option>
+  </select>
+
+            <a class="button" href="/Prediction">Back</a> <br>
+            <button type="submit" class="button" href="/BTResult">Predict</button><br>
+          </div>
+        </form>
+
+</body>
+</html>

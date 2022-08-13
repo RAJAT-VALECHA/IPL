@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/aftertoss.css">
+    <style>
+      h1{text-align: center;}
+      button.button {
+          display: block;
+          width : 100%;
+          background: #45a049;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+          color: white;
+          font-weight: bold;
+          line-height: 25px;
+      }
+      a.button {
+          display: block;
+          background: #45a049;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+          color: white;
+          font-weight: bold;
+          line-height: 25px;
+      }
+
+      body {
+          text-align: center;
+      }
+      h1{
+          font-size: 55px;
+      }
+      form {
+          display: inline-block;
+      }
+      div {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+
+        .button:hover {
+          background-color: #45a049;
+        }
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        .feed_form1 {
+          float: left;
+          /* width: 50%; */
+           padding: 50px;
+
+          width:27%;
+          height:700px;
+      }
+      .feed_form2 {
+        float:left ;
+        /* width: 50%; */
+         padding: 50px;
+
+        width:25%;
+        height:700px;
+      }
+      .feed_form3 {
+        float: left;
+        /* width: 50%; */
+
+         padding: 50px;
+        width:27%;
+         height:700px;
+      }
+  </style>
+  </head>
+  <body style="background-color:powderblue;"></body>
+  <section id="IPL">
+    <h1>Player Basis Prediction</h1>
+</section>
+<body>
+
+  <form action="/ATResult" method="post">
+      {% csrf_token %}
+      <div class="feed_form1">
+              <select id="Team1_Name" name="Team1_Name" placeholder="Team1_Name">
+                <option value="Team1_Name">Team Name 1</option>
+                <option value="0">Chennai Super Kings</option>
+                <option value="1">Delhi Capitals</option>
+                <option value="2">Kolkata Knight Riders</option>
+                <option value="4">Mumbai Indians</option>
+                <option value="3">Punjab Kings</option>
+                <option value="6">Rajasthan Royals</option>
+                <option value="7">Royal Challenger Banglore</option>
+                <option value="8">Sunrisers Hyderabad</option>
+                <option value="5">other</option>
+                </select>
+              <input type="text" name="T1P1" placeholder="Player Name 1"><br>
+              <input type="text" name="T1P2" placeholder="Player Name 2"><br>
+              <input type="text" name="T1P3" placeholder="Player Name 3"><br>
+              <input type="text" name="T1P4" placeholder="Player Name 4"><br>
+              <input type="text" name="T1P5" placeholder="Player Name 5"><br>
+              <input type="text" name="T1P6" placeholder="Player Name 6"><br>
+              <input type="text" name="T1P7" placeholder="Player Name 7"><br>
+              <input type="text" name="T1P8" placeholder="Player Name 8"><br>
+              <input type="text" name="T1P9" placeholder="Player Name 9"><br>
+              <input type="text" name="T1P10" placeholder="Player Name 10"><br>
+              <input type="text" name="T1P11" placeholder="Player Name 11"><br>
+      </div>
+    <div class="feed_form2">
+          <select id="Toss_Wining_Team" name="Toss_Wining_Team" placeholder="Toss_Wining_Team">
+            <option value="Toss Wining Team">Toss Wining Team</option>
+            <option value="1">Team 1</option>
+            <option value="2">Team 2</option>
+            </select>
+            <select id="Toss_Decision" name="Toss_Decision" placeholder="Toss_Decision">
+              <option value="Toss_Decision">Toss Decision</option>
+              <option value="0">Batting</option>
+              <option value="1">Bowling</option>
+            </select>
+            <select id="Venue" name="Venue" placeholder="Venue">
+              <option value="Venue">Venue</option>
+<option value="0">Barabati Stadium</option>
+<option value="1">Brabourne Stadium</option>
+<option value="2">Buffalo Park</option>
+<option value="3">De Beers Diamond Oval</option>
+<option value="4">Dr DY Patil Sports Academy</option>
+<option value="5">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+<option value="6">Dubai International Cricket Stadium</option>
+<option value="7">Eden Gardens</option>
+<option value="8">Feroz Shah Kotla</option>
+<option value="9">Green Park</option>
+<option value="10">Himachal Pradesh Cricket Association Stadium</option>
+<option value="11">Holkar Cricket Stadium</option>
+<option value="12">JSCA International Stadium Complex</option>
+<option value="13">Kingsmead</option>
+<option value="14">M Chinnaswamy Stadium</option>
+<option value="15">MA Chidambaram Stadium, Chepauk</option>
+<option value="16">Maharashtra Cricket Association Stadium</option>
+<option value="17">Nehru Stadium</option>
+<option value="18">New Wanderers Stadium</option>
+<option value="19">Newlands</option>
+<option value="20">OUTsurance Oval</option>
+<option value="21">Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+<option value="22">Punjab Cricket Association Stadium, Mohali</option>
+<option value="23">Rajiv Gandhi International Stadium, Uppal</option>
+<option value="24">Sardar Patel Stadium, Motera</option>
+<option value="25">Saurashtra Cricket Association Stadium</option>
+<option value="26">Sawai Mansingh Stadium</option>
+<option value="27">Shaheed Veer Narayan Singh International Stadium</option>
+<option value="28">Sharjah Cricket Stadium</option>
+<option value="29">Sheikh Zayed Stadium</option>
+<option value="30">St George's Park</option>
+<option value="31">Subrata Roy Sahara Stadium</option>
+<option value="32">SuperSport Park</option>
+<option value="33">Vidarbha Cricket Association Stadium, Jamtha</option>
+<option value="34">Wankhede Stadium</option>
+</select>
+</div>
+<!-- <form>
+  <div class="feed">
+
+    <div class="feed_form">
+        <form>
+            <input type="text" name="Team Name 1" placeholder="Team Name 1"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 1"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 2"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 3"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 4"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 5"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 6"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 7"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 8"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 9"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 10"><br>
+            <input type="text" name="Player Names" placeholder="Player Name 11"><br>
+        </form>
+    </div>
+  </div>
+</form> -->
+    <div class="feed_form3" >
+          <select id="Team2_Name" name="Team2_Name" placeholder="Team2_Name">
+            <option value="Team2_Name">Team Name 2</option>
+            <option value="0">Chennai Super Kings</option>
+            <option value="1">Delhi Capitals</option>
+            <option value="2">Kolkata Knight Riders</option>
+            <option value="4">Mumbai Indians</option>
+            <option value="3">Punjab Kings</option>
+            <option value="6">Rajasthan Royals</option>
+            <option value="7">Royal Challenger Banglore</option>
+            <option value="8">Sunrisers Hyderabad</option>
+            <option value="5">other</option>
+            </select>
+          <input type="text" name="T2P1" placeholder="Player Name 1"><br>
+          <input type="text" name="T2P2" placeholder="Player Name 2"><br>
+          <input type="text" name="T2P3" placeholder="Player Name 3"><br>
+          <input type="text" name="T2P4" placeholder="Player Name 4"><br>
+          <input type="text" name="T2P5" placeholder="Player Name 5"><br>
+          <input type="text" name="T2P6" placeholder="Player Name 6"><br>
+          <input type="text" name="T2P7" placeholder="Player Name 7"><br>
+          <input type="text" name="T2P8" placeholder="Player Name 8"><br>
+          <input type="text" name="T2P9" placeholder="Player Name 9"><br>
+          <input type="text" name="T2P10" placeholder="Player Name 10"><br>
+          <input type="text" name="T2P11" placeholder="Player Name 11"><br>
+    </div>
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br><br><br>
+    <br><br>
+    <br><br><br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br><br><br><br>
+<a class="button" href="/Prediction">Back</a> <br>
+<button class="button" href="/Atresult">Predict</button>
+</form>
+
+
+
+</body>
+</html>
